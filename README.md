@@ -137,7 +137,7 @@ Proves i exercicis a fer i entregar
     - Freqüència de mostratge.
     - Nombre de mostres de senyal.
     - Tria un segment de senyal de 25ms i insereix una gráfica amb la seva evolució temporal.
-    - Representa la seva transformada en dB en funció de la freqüència, en el marge $f_m\le f\le f_m/2$.
+    - Representa la seva transformada en dB en funció de la freqüència, en el marge $0\le f\le f_m/2$.
     - Quines son les freqüències més importants del segment triat?
 
 

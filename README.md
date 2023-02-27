@@ -113,6 +113,22 @@ Proves i exercicis a fer i entregar
     <img src="img/sinus_440.png" width="350" align="center">
     <img src="img/sinus_4000.png" width="350" align="left">
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     Finalment per 
 
 

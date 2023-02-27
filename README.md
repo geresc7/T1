@@ -157,6 +157,7 @@ Proves i exercicis a fer i entregar
     plt.show()                            # Per mostrar els grafics
     ```
     Gràfiques resultants del codi anterior:
+
     <img src="img/ex2_sinus_4000.png" width="350" align="left">
     <img src="img/ex2_fft_4000.png" width="350" align="center">
     

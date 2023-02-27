@@ -49,16 +49,41 @@ sd.play(x, fm)                # Reproducció d'àudio
 from numpy.fft import fft     # Importem la funció fft
 N=5000                        # Dimensió de la transformada discreta
 X=fft(x[0 : Lsx], N)           # Càlcul de la transformada de 5 períodes de la sinusoide
-
+Y=fft(y[0 : Lsy], N)       #ex1
+Z=fft(z[0 : Lsz], N)       #ex1
 k=np.arange(N)                        # Vector amb els valors 0≤  k<N
 
-plt.figure(1)                         # Nova figura
+plt.figure(3)                         # Nova figura
 plt.subplot(211)                      # Espai per representar el mòdul
 plt.plot(k,abs(X))                    # Representació del mòdul de la transformada
 plt.title(f'Transformada del senyal de Ls={Lsx} mostres amb DFT de N={N}')   # Etiqueta del títol
 plt.ylabel('|X[k]|')                  # Etiqueta de mòdul
 plt.subplot(212)                      # Espai per representar la fase
 plt.plot(k,np.unwrap(np.angle(X)))    # Representació de la fase de la transformad, desenroscada
+plt.xlabel('Index k')                 # Etiqueta de l'eix d'abscisses 
+plt.ylabel('$\phi_x[k]$')             # Etiqueta de la fase en Latex
+plt.show()                            # Per mostrar els grafics
+
+#ex1 --> 4 kHz
+plt.figure(4)                         # Nova figura
+plt.subplot(211)                      # Espai per representar el mòdul
+plt.plot(k,abs(Y))                    # Representació del mòdul de la transformada
+plt.title(f'Transformada del senyal de Ls={Lsy} mostres amb DFT de N={N}')   # Etiqueta del títol
+plt.ylabel('|X[k]|')                  # Etiqueta de mòdul
+plt.subplot(212)                      # Espai per representar la fase
+plt.plot(k,np.unwrap(np.angle(Y)))    # Representació de la fase de la transformad, desenroscada
+plt.xlabel('Index k')                 # Etiqueta de l'eix d'abscisses 
+plt.ylabel('$\phi_x[k]$')             # Etiqueta de la fase en Latex
+plt.show()                            # Per mostrar els grafics
+
+#ex1 --> 50 Hz
+plt.figure(5)                         # Nova figura
+plt.subplot(211)                      # Espai per representar el mòdul
+plt.plot(k,abs(Z))                    # Representació del mòdul de la transformada
+plt.title(f'Transformada del senyal de Ls={Lsz} mostres amb DFT de N={N}')   # Etiqueta del títol
+plt.ylabel('|X[k]|')                  # Etiqueta de mòdul
+plt.subplot(212)                      # Espai per representar la fase
+plt.plot(k,np.unwrap(np.angle(Z)))    # Representació de la fase de la transformad, desenroscada
 plt.xlabel('Index k')                 # Etiqueta de l'eix d'abscisses 
 plt.ylabel('$\phi_x[k]$')             # Etiqueta de la fase en Latex
 plt.show()                            # Per mostrar els grafics

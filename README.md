@@ -107,7 +107,10 @@ Proves i exercicis a fer i entregar
     freqüència pròpia en el marge audible. Comenta els resultats**
     
     <span style="color: DodgerBlue">A part de la freqüència d'exemple (440 Hz) i de la de 4kHz, he provat amb una freqüència baixa, de 50 Hz. En quant a la creació i reproducció dels nous "wavs", s'aprecia perfectament quin fitxer correspon a cada freqüència, sent la de 50 Hz un to molt greu i la de 4 kHz un to molt més agut. Respecte a la representació de les gràfiques, agafant el mateix nombre de periodes, es veu clarament a les gràfiques que a més freqüència més curt el periode i a la inversa:
-    <img src="img/tanh.png" width="640" align="center">  </span>
+    </span>
+    <img src="img/sinus_50.png" width="640" align="center">
+    <img src="img/sinus_440.png" width="640" align="center">
+    <img src="img/sinus_4000.png" width="640" align="center">
 
 2. **Modifica el programa per considerar com a senyal a analitzar el senyal del fitxer wav que has creat 
     (`x_r, fm = sf.read('nom_fitxer.wav')`).**

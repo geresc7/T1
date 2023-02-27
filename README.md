@@ -113,6 +113,7 @@ Proves i exercicis a fer i entregar
     <img src="img/sinus_440.png" width="350" align="center">
     <img src="img/sinus_4000.png" width="350" align="left">
 
+    Finalment per 
 
 
 2. **Modifica el programa per considerar com a senyal a analitzar el senyal del fitxer wav que has creat 

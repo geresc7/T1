@@ -1,5 +1,6 @@
 # Gerard Escardó Cabrerizo
 
+#EX1
 import numpy as np
 import matplotlib.pyplot as plt
 import soundfile as sf
@@ -87,3 +88,23 @@ plt.plot(k,np.unwrap(np.angle(Z)))    # Representació de la fase de la transfor
 plt.xlabel('Index k')                 # Etiqueta de l'eix d'abscisses 
 plt.ylabel('$\phi_x[k]$')             # Etiqueta de la fase en Latex
 plt.show()                            # Per mostrar els grafics
+
+
+
+#EX2
+x_r, fm_r = sf.read('so_ex1_4000.wav')      #llegir so
+Tm_r=1/fm_r                                   #període de mostratge
+fx_r = fm_r/2                               #Nyquist per coneixer la frecuencia del to
+Tx_r=1/fx_r                                 #període de la senyal
+Lsx_r=int(fm_r*5*Tx_r)               # Nombre de mostres corresponents a 5 períodes de la sinusoide       
+Leng = len(x_r)                      #llargada de la señal
+T_r = Leng*Tm_r                      # Durada de T segons
+L_r = int(fm_r * T_r)                  # Nombre de mostres del senyal digital
+Tm=1/fm                              # Període de mostratge
+t_r=Tm_r*np.arange(L_r) 
+
+plt.figure(6)                             # Nova figura
+plt.plot(t_r[0:Lsx_r], x_r[0:Lsx_r])                # Representació del senyal en funció del temps
+plt.xlabel('t en segons')                 # Etiqueta eix temporal
+plt.title('5 periodes del so_ex1 (4 kHz)')   # Títol del gràfic
+plt.show() 

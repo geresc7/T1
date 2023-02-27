@@ -30,17 +30,17 @@ Lsz=int(fm*5*Tz)             # Nº mostres ex1
 plt.figure(0)                             # Nova figura
 plt.plot(t[0:Lsx], x[0:Lsx])                # Representació del senyal en funció del temps
 plt.xlabel('t en segons')                 # Etiqueta eix temporal
-plt.title('5 periodes de la sinusoide')   # Títol del gràfic
+plt.title('5 periodes de la sinusoide (440 Hz)')   # Títol del gràfic
 plt.show() 
 plt.figure(1)
-plt.plot(t[0:Lsy], x[0:Lsy])   # Representació ex1
+plt.plot(t[0:Lsy], y[0:Lsy])   # Representació ex1
 plt.xlabel('t en segons')                 # Etiqueta eix temporal
-plt.title('50 periodes de la sinusoide')   # Títol del gràfic
+plt.title('5 periodes de la sinusoide (4 kHz)')   # Títol del gràfic
 plt.show() 
 plt.figure(2)
-plt.plot(t[0:Lsz], x[0:Lsz])   # Respresentació ex1
+plt.plot(t[0:Lsz], z[0:Lsz])   # Respresentació ex1
 plt.xlabel('t en segons')                 # Etiqueta eix temporal
-plt.title('0.5 periodes de la sinusoide')   # Títol del gràfic
+plt.title('5 periodes de la sinusoide (50 Hz)')   # Títol del gràfic
 plt.show()                                # Visualització de l'objecte gràfic. 
 
 import sounddevice as sd      # Importem el mòdul sounddevice per accedir a la tarja de so

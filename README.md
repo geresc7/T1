@@ -112,8 +112,8 @@ Proves i exercicis a fer i entregar
     <img src="img/sinus_440.png" width="350" align="center">
     <img src="img/sinus_4000.png" width="350" align="center">
     
-    Finalment, a les transformacions de domini s'observa que com més baixa és la freqüència, més mostres s'agafen per representar la senyal transformada:
-    
+    Finalment, a les transformacions de domini s'observa que com més baixa és la freqüència, més mostres s'agafen per representar la senyal transformada (en ordre, 50 Hz - 440 Hz - 4 kHz):
+
     <img src="img/fft_50.png" width="350" align="left">
     <img src="img/fft_440.png" width="350" align="center">
     <img src="img/fft_4000.png" width="350" align="center">

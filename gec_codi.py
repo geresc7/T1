@@ -108,3 +108,18 @@ plt.plot(t_r[0:Lsx_r], x_r[0:Lsx_r])                # Representació del senyal 
 plt.xlabel('t en segons')                 # Etiqueta eix temporal
 plt.title('5 periodes del so_ex1 (4 kHz)')   # Títol del gràfic
 plt.show() 
+
+N=5000                         # Dimensió de la transformada discreta
+X_R=fft(x_r[0 : Lsx_r], N)           # Càlcul de la transformada de 5 períodes de la sinusoide
+k=np.arange(N)                        # Vector amb els valors 0≤  k<N
+
+plt.figure(7)                         # Nova figura
+plt.subplot(211)                      # Espai per representar el mòdul
+plt.plot(k,abs(X_R))                    # Representació del mòdul de la transformada
+plt.title(f'Transformada del senyal de Ls={Lsx_r} mostres amb DFT de N={N}')   # Etiqueta del títol
+plt.ylabel('|X[k]|')                  # Etiqueta de mòdul
+plt.subplot(212)                      # Espai per representar la fase
+plt.plot(k,np.unwrap(np.angle(X_R)))    # Representació de la fase de la transformad, desenroscada
+plt.xlabel('Index k')                 # Etiqueta de l'eix d'abscisses 
+plt.ylabel('$\phi_x[k]$')             # Etiqueta de la fase en Latex
+plt.show()                            # Per mostrar els grafics

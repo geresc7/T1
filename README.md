@@ -121,7 +121,8 @@ Proves i exercicis a fer i entregar
 
 2. **Modifica el programa per considerar com a senyal a analitzar el senyal del fitxer wav que has creat 
     (`x_r, fm = sf.read('nom_fitxer.wav')`).**
-
+    - Insereix a continuació una gràfica que mostri 5 períodes del senyal i la seva transformada.  
+    
     ```python
     x_r, fm_r = sf.read('so_ex1_4000.wav')      #llegir so
     Tm_r=1/fm_r                                   #període de mostratge
@@ -140,10 +141,25 @@ Proves i exercicis a fer i entregar
     plt.title('5 periodes del so_ex1 (4 kHz)')   # Títol del gràfic
     plt.show() 
     }
+    N=5000                         # Dimensió de la transformada discreta
+    X_R=fft(x_r[0 : Lsx_r], N)           # Càlcul de la transformada de 5 períodes de la sinusoide
+    k=np.arange(N)                        # Vector amb els valors 0≤  k<N
+
+    plt.figure(7)                         # Nova figura
+    plt.subplot(211)                      # Espai per representar el mòdul
+    plt.plot(k,abs(X_R))                    # Representació del mòdul de la transformada
+    plt.title(f'Transformada del senyal de Ls={Lsx_r} mostres amb DFT de N={N}')   # Etiqueta del títol
+    plt.ylabel('|X[k]|')                  # Etiqueta de mòdul
+    plt.subplot(212)                      # Espai per representar la fase
+    plt.plot(k,np.unwrap(np.angle(X_R)))    # Representació de la fase de la transformad, desenroscada
+    plt.xlabel('Index k')                 # Etiqueta de l'eix d'abscisses 
+    plt.ylabel('$\phi_x[k]$')             # Etiqueta de la fase en Latex
+    plt.show()                            # Per mostrar els grafics
     ```
-
-    - Insereix a continuació una gràfica que mostri 5 períodes del senyal i la seva transformada.
-
+    Gràfiques resultants del codi anterior:
+    <img src="img/ex2_sinus_4000.png" width="350" align="left">
+    <img src="img/ex2_fft_4000.png" width="350" align="center">
+    
     - Explica el resultat del apartat anterior.
 
 3. **Modifica el programa per representar el mòdul de la Transformada de Fourier en dB i l'eix d'abscisses en el marge de

@@ -108,28 +108,10 @@ Proves i exercicis a fer i entregar
     
     A part de la freqüència d'exemple (440 Hz) i de la de 4kHz, he provat amb una freqüència baixa, de 50 Hz. En quant a la creació i reproducció dels nous "wavs", s'aprecia perfectament quin fitxer correspon a cada freqüència, sent la de 50 Hz un to molt greu i la de 4 kHz un to molt més agut. Respecte a la representació de les gràfiques, agafant el mateix nombre de periodes, es veu clarament a les gràfiques que a més freqüència més curt el periode i a la inversa:
 
-
     <img src="img/sinus_50.png" width="350" align="left">
     <img src="img/sinus_440.png" width="350" align="center">
-    <img src="img/sinus_4000.png" width="350" align="left">
-
+    <img src="img/sinus_4000.png" width="350" align="center">
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    Finalment per 
 
 
 2. **Modifica el programa per considerar com a senyal a analitzar el senyal del fitxer wav que has creat 

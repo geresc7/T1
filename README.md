@@ -109,19 +109,19 @@ Proves i exercicis a fer i entregar
     <span style="color: DodgerBlue">A part de la freqüència d'exemple (440 Hz) i de la de 4kHz, he provat amb una freqüència baixa, de 50 Hz. En quant a la creació i reproducció dels nous "wavs", s'aprecia perfectament quin fitxer correspon a cada freqüència, sent la de 50 Hz un to molt greu i la de 4 kHz un to molt més agut. Respecte a la representació de les gràfiques, agafant el mateix nombre de periodes, es veu clarament a les gràfiques que a més freqüència més curt el periode i a la inversa. Per he canviat el nombre de períodes per visualitzar correctament les gràfiques, ja que en el cas per un cas el període és molt curt i per l'altre molt llarg. </span>
 
 2. **Modifica el programa per considerar com a senyal a analitzar el senyal del fitxer wav que has creat 
-    (`x_r, fm = sf.read('nom_fitxer.wav')`).
+    (`x_r, fm = sf.read('nom_fitxer.wav')`).**
 
     - Insereix a continuació una gràfica que mostri 5 períodes del senyal i la seva transformada.
 
-    - Explica el resultat del apartat anterior.**
+    - Explica el resultat del apartat anterior.
 
 3. **Modifica el programa per representar el mòdul de la Transformada de Fourier en dB i l'eix d'abscisses en el marge de
-    $0$ a $f_m/2$ en Hz.
+    $0$ a $f_m/2$ en Hz.**
 
     - Comprova que la mesura de freqüència es correspon amb la freqüència de la sinusoide que has fet servir.
 
     - Com pots identificar l'amplitud de la sinusoide a partir de la representació de la transformada?
-      Comprova-ho amb el senyal generat.**
+      Comprova-ho amb el senyal generat.
 
 > NOTES:
 >
@@ -134,13 +134,13 @@ Proves i exercicis a fer i entregar
 > $f_k = \frac{k}{N} f_m$
 
 4. **Tria un fitxer d'àudio en format wav i mono (el pots aconseguir si en tens amb altres formats amb el programa Audacity). 
-    Llegeix el fitxer d'àudio i comprova:
+    Llegeix el fitxer d'àudio i comprova:**
 
     - Freqüència de mostratge.
     - Nombre de mostres de senyal.
     - Tria un segment de senyal de 25ms i insereix una gráfica amb la seva evolució temporal.
     - Representa la seva transformada en dB en funció de la freqüència, en el marge $0\le f\le f_m/2$.
-    - Quines son les freqüències més importants del segment triat?**
+    - Quines son les freqüències més importants del segment triat?
 
 
 Entrega

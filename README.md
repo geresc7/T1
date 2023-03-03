@@ -168,7 +168,7 @@ Proves i exercicis a fer i entregar
 3. **Modifica el programa per representar el mòdul de la Transformada de Fourier en dB i l'eix d'abscisses en el marge de
     $0$ a $f_m/2$ en Hz.**
     
-    Per aquest exercici es fa servir el to de 50 Hz de l'exercici 1, canviant la dimensió de la trandformada discreta a N=50000, per poder visualitzar adequadament la gràfica:
+    Per aquest exercici es fa servir el to de 50 Hz de l'exercici 1, canviant la dimensió de la transformada discreta a N=50000, per poder visualitzar adequadament la gràfica:
     ```python
         T= 2.5                               # Durada de T segons
         fm=8000                              # Freqüència de mostratge en Hz
@@ -207,9 +207,13 @@ Proves i exercicis a fer i entregar
 
 
     - Comprova que la mesura de freqüència es correspon amb la freqüència de la sinusoide que has fet servir.
+    La mesura de freqüència es correspon amb la freqüència de la sinusoide (50 Hz), ja que el seu pic (valor màxim d'amplitud) al mòdul de la transformada està pel valor de 50 Hz a l'eix X.
 
-    - Com pots identificar l'amplitud de la sinusoide a partir de la representació de la transformada?
-      Comprova-ho amb el senyal generat.
+    - Com pots identificar l'amplitud de la sinusoide a partir de la representació de la transformada? Comprova-ho amb el senyal generat.
+    L'amplitud màxima del mòdul és 0 dB. L'amplitud de la sinusoide equivaldrà a aquest valor passat a escala líneal: 10^(0/20) = 1 = Amplitud de la sinusoide.
+    
+
+      
 
 > NOTES:
 >

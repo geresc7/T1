@@ -153,5 +153,6 @@ fk =(k/N)*fm
 plt.figure(8)                         # Nova figura          
 plt.plot(fk[0:int(fm/2)], Z_dB[0:int(fm/2)])          # Representació del mòdul de la transformada
 plt.title(f'Transformada del senyal de Ls={Lsz} mostres amb DFT de N={N}')   # Etiqueta del títol
-plt.ylabel('|X[k]|')                  # Etiqueta de mòdul
+plt.ylabel('|X[k]|(dB)')                  # Etiqueta de mòdul
+plt.xlabel('Hz')                  # Etiqueta de mòdul
 plt.show()                  

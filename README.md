@@ -196,14 +196,16 @@ Proves i exercicis a fer i entregar
         plt.figure(8)                         # Nova figura          
         plt.plot(fk[0:int(fm/2)], Z_dB[0:int(fm/2)])          # Representació del mòdul de la transformada
         plt.title(f'Transformada del senyal de Ls={Lsz} mostres amb DFT de N={N}')   # Etiqueta del títol
-        plt.ylabel('|X[k]|')                  # Etiqueta de mòdul
+        plt.ylabel('|X[k]|(dB)')                  # Etiqueta de mòdul
+        plt.xlabel('Hz')                  # Etiqueta de mòdul
         plt.show()  
     ```
 
     Gràfica resultant del codi anterior:
-    <img src="img/ex2_sinus_4000.png" width="350" align="left">
 
-    
+    <img src="img/ex.fft_50.png" width="350" align="centre">
+
+
     - Comprova que la mesura de freqüència es correspon amb la freqüència de la sinusoide que has fet servir.
 
     - Com pots identificar l'amplitud de la sinusoide a partir de la representació de la transformada?

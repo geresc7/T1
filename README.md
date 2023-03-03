@@ -207,11 +207,13 @@ Proves i exercicis a fer i entregar
 
 
     - Comprova que la mesura de freqüència es correspon amb la freqüència de la sinusoide que has fet servir.
+    
     La mesura de freqüència es correspon amb la freqüència de la sinusoide (50 Hz), ja que el seu pic (valor màxim d'amplitud) al mòdul de la transformada està pel valor de 50 Hz a l'eix X.
 
     - Com pots identificar l'amplitud de la sinusoide a partir de la representació de la transformada? Comprova-ho amb el senyal generat.
-    L'amplitud màxima del mòdul és 0 dB. L'amplitud de la sinusoide equivaldrà a aquest valor passat a escala líneal: 10^(0/20) = 1 = Amplitud de la sinusoide.
     
+    L'amplitud màxima del mòdul és 0 dB. L'amplitud de la sinusoide equivaldrà a aquest valor passat a escala líneal: 10^(0/20) = 1 = Amplitud de la sinusoide.
+
 
       
 

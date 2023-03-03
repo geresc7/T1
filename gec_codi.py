@@ -145,9 +145,9 @@ import sounddevice as sd      # Importem el mòdul sounddevice per accedir a la 
 sd.play(z, fm)                # Reproducció d'àudio
 
 from numpy.fft import fft     # Importem la funció fft
-N=5000                        # Dimensió de la transformada discreta
+N=50000                        # Dimensió de la transformada discreta
 Z=fft(z[0 : Lsz], N)       
-Z_dB = 20*np.log10(np.abs(X)/max(np.abs(X)))
+Z_dB = 20*np.log10(np.abs(Z)/max(np.abs(Z)))
 k=np.arange(N)                        # Vector amb els valors 0≤  k<N
 fk =(k/N)*fm
 plt.figure(8)                         # Nova figura          

@@ -168,7 +168,7 @@ Proves i exercicis a fer i entregar
 3. **Modifica el programa per representar el mòdul de la Transformada de Fourier en dB i l'eix d'abscisses en el marge de
     $0$ a $f_m/2$ en Hz.**
     
-    Per aquest exercici es fa servir el to de 50 Hz de l'exercici 1:
+    Per aquest exercici es fa servir el to de 50 Hz de l'exercici 1, canviant la dimensió de la trandformada discreta a N=50000, per poder visualitzar adequadament la gràfica:
     ```python
         T= 2.5                               # Durada de T segons
         fm=8000                              # Freqüència de mostratge en Hz
@@ -188,9 +188,9 @@ Proves i exercicis a fer i entregar
         sd.play(z, fm)                # Reproducció d'àudio
 
         from numpy.fft import fft     # Importem la funció fft
-        N=5000                        # Dimensió de la transformada discreta
+        N=50000                      # Dimensió de la transformada discreta
         Z=fft(z[0 : Lsz], N)       
-        Z_dB = 20*np.log10(np.abs(X)/max(np.abs(X)))
+        Z_dB = 20*np.log10(np.abs(Z)/max(np.abs(Z)))
         k=np.arange(N)                        # Vector amb els valors 0≤  k<N
         fk =(k/N)*fm
         plt.figure(8)                         # Nova figura          

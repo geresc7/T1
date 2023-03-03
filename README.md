@@ -162,6 +162,7 @@ Proves i exercicis a fer i entregar
     <img src="img/ex2_fft_4000.png" width="350" align="center">
     
     - Explica el resultat del apartat anterior.
+    
     S'obté el mateix so que en cas anterior ja que la freqüència que s'utilitza és la mateixa, però la seva amplitud es veu reduida a un quart de l'amplitud original, quan creavem el so.
 
 3. **Modifica el programa per representar el mòdul de la Transformada de Fourier en dB i l'eix d'abscisses en el marge de

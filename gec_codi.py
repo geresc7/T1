@@ -123,3 +123,35 @@ plt.plot(k,np.unwrap(np.angle(X_R)))    # Representació de la fase de la transf
 plt.xlabel('Index k')                 # Etiqueta de l'eix d'abscisses 
 plt.ylabel('$\phi_x[k]$')             # Etiqueta de la fase en Latex
 plt.show()                            # Per mostrar els grafics
+
+
+#EX3
+
+T= 2.5                               # Durada de T segons
+fm=8000                              # Freqüència de mostratge en Hz
+fz=50                         # Freqüència ex1
+A=4                                  # Amplitud de la sinusoide
+pi=np.pi                             # Valor del número pi
+L = int(fm * T)                      # Nombre de mostres del senyal digital
+Tm=1/fm                              # Període de mostratge
+t=Tm*np.arange(L)                    # Vector amb els valors de la variable temporal, de 0 a T
+z = A * np.cos(2 * pi * fz * t)  # Senyal sinusoidal ex1
+sf.write('so_ex1_50.wav', z, fm)   # Escriptura del senyal a un fitxer en format wav
+
+Tz=1/fz                        # Període del senyal ex1
+Lsz=int(fm*5*Tz)             # Nº mostres ex1
+
+import sounddevice as sd      # Importem el mòdul sounddevice per accedir a la tarja de so
+sd.play(z, fm)                # Reproducció d'àudio
+
+from numpy.fft import fft     # Importem la funció fft
+N=5000                        # Dimensió de la transformada discreta
+Z=fft(z[0 : Lsz], N)       
+Z_dB = 20*np.log10(np.abs(X)/max(np.abs(X)))
+k=np.arange(N)                        # Vector amb els valors 0≤  k<N
+fk =(k/N)*fm
+plt.figure(8)                         # Nova figura          
+plt.plot(fk[0:int(fm/2)], Z_dB[0:int(fm/2)])          # Representació del mòdul de la transformada
+plt.title(f'Transformada del senyal de Ls={Lsz} mostres amb DFT de N={N}')   # Etiqueta del títol
+plt.ylabel('|X[k]|')                  # Etiqueta de mòdul
+plt.show()                  

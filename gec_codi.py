@@ -156,3 +156,10 @@ plt.title(f'Transformada del senyal de Ls={Lsz} mostres amb DFT de N={N}')   # E
 plt.ylabel('|X[k]|(dB)')                  # Etiqueta de mòdul
 plt.xlabel('Hz')                  # Etiqueta de mòdul
 plt.show()                  
+
+
+#EX4
+
+s, fm = sf.read('Catch & Release (Deepend remix).wav')
+numMostres = len(s)
+

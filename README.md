@@ -203,7 +203,7 @@ Proves i exercicis a fer i entregar
 
     Gràfica resultant del codi anterior:
 
-    <img src="img/ex.fft_50.png" width="350" align="centre">
+    <img src="img/ex3.fft_50.png" width="350" align="centre">
 
 
     - Comprova que la mesura de freqüència es correspon amb la freqüència de la sinusoide que has fet servir.

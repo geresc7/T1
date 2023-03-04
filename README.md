@@ -259,12 +259,32 @@ Proves i exercicis a fer i entregar
     ```
     
     Gràfica resultant del codi anterior:
-
     <img src="img/ex4_25ms.png" width="350" align="centre">
 
 
     - Representa la seva transformada en dB en funció de la freqüència, en el marge $0\le f\le f_m/2$.
+    ```python
+        N=fm
+        S=fft(s[L1:L2], N)       
+        S_dB = 20*np.log10(np.abs(S)/max(np.abs(S)))
+        k=np.arange(N)                        # Vector amb els valors 0≤  k<N
+        fk =(k/N)*fm
+        plt.figure(10)                         # Nova figura          
+        plt.plot(fk[0:int(fm/2)], S_dB[0:int(fm/2)])          # Representació del mòdul de la transformada
+        plt.title(f'Transformada del senyal de Ls={L2-L1} mostres amb DFT de N={N}')   # Etiqueta del títol
+        plt.ylabel('|S[k]|(dB)')                  # Etiqueta de mòdul
+        plt.xlabel('Hz')                  # Etiqueta de mòdul
+        plt.show()      
+    ```
+    Gràfica resultant del codi anterior:
+    <img src="img/ex4_fft.png" width="350" align="centre">
+
+
     - Quines son les freqüències més importants del segment triat?
+    Les freqüències més importants en aquest segment son aproximadament, de més important a menys:
+        - Freqs. al voltant dels 500 Hz
+        - Freqs. al voltant dels 4 kHz
+        - Freqs. al voltatn dels 7 kHz
 
 
 Entrega

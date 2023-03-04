@@ -177,4 +177,14 @@ plt.figure(9)
 plt.plot(t,s[L1:L2])
 plt.show()
 
-
+N=fm
+S=fft(s[L1:L2], N)       
+S_dB = 20*np.log10(np.abs(S)/max(np.abs(S)))
+k=np.arange(N)                        # Vector amb els valors 0≤  k<N
+fk =(k/N)*fm
+plt.figure(10)                         # Nova figura          
+plt.plot(fk[0:int(fm/2)], S_dB[0:int(fm/2)])          # Representació del mòdul de la transformada
+plt.title(f'Transformada del senyal de Ls={L2-L1} mostres amb DFT de N={N}')   # Etiqueta del títol
+plt.ylabel('|S[k]|(dB)')                  # Etiqueta de mòdul
+plt.xlabel('Hz')                  # Etiqueta de mòdul
+plt.show()                  

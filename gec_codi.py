@@ -165,3 +165,16 @@ nMostres = len(s)
 
 print("Freqüència de mostratge (Hz):", fm)
 print("Nombre de mostres:", nMostres)
+
+t0 = 43                         #inici del segment
+tt = 0.025                      #durada del segment
+L1 = int(fm * t0)
+L2 = int(fm * (t0+tt))
+
+Tm=1/fm
+t=Tm*np.arange(L1,L2)           #segment
+plt.figure(9)
+plt.plot(t,s[L1:L2])
+plt.show()
+
+

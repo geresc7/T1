@@ -238,11 +238,31 @@ Proves i exercicis a fer i entregar
 
         print("Freqüència de mostratge (Hz):", fm)
         print("Nombre de mostres:", nMostres)
-
-
     ```
+    
+    Amb el codi anterior s'obté que la freqüència de mostratge és 44100 Hz i el nombre de mostres 8660736.
+    
 
     - Tria un segment de senyal de 25ms i insereix una gráfica amb la seva evolució temporal.
+
+    ```python
+        t0 = 43                         #inici del segment
+        tt = 0.025                      #durada del segment
+        L1 = int(fm * t0)
+        L2 = int(fm * (t0+tt))
+
+        Tm=1/fm
+        t=Tm*np.arange(L1,L2)           #segment
+        plt.figure(9)
+        plt.plot(t,s[L1:L2])
+        plt.show()
+    ```
+    
+    Gràfica resultant del codi anterior:
+
+    <img src="img/ex4_25ms.png" width="350" align="centre">
+
+
     - Representa la seva transformada en dB en funció de la freqüència, en el marge $0\le f\le f_m/2$.
     - Quines son les freqüències més importants del segment triat?
 

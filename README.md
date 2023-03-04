@@ -259,6 +259,7 @@ Proves i exercicis a fer i entregar
     ```
     
     Gràfica resultant del codi anterior:
+    
     <img src="img/ex4_25ms.png" width="350" align="centre">
 
 
@@ -276,11 +277,14 @@ Proves i exercicis a fer i entregar
         plt.xlabel('Hz')                  # Etiqueta de mòdul
         plt.show()      
     ```
+   
     Gràfica resultant del codi anterior:
+   
     <img src="img/ex4_fft.png" width="350" align="centre">
 
 
     - Quines son les freqüències més importants del segment triat?
+    
     Les freqüències més importants en aquest segment son aproximadament, de més important a menys:
         - Freqs. al voltant dels 500 Hz
         - Freqs. al voltant dels 4 kHz

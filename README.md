@@ -230,8 +230,18 @@ Proves i exercicis a fer i entregar
 4. **Tria un fitxer d'àudio en format wav i mono (el pots aconseguir si en tens amb altres formats amb el programa Audacity). 
     Llegeix el fitxer d'àudio i comprova:**
 
-    - Freqüència de mostratge.
-    - Nombre de mostres de senyal.
+    - Freqüència de mostratge i nombre de mostres de senyal.
+
+    ```python
+        s, fm = sf.read('Catch & Release (Deepend remix).wav')
+        nMostres = len(s)
+
+        print("Freqüència de mostratge (Hz):", fm)
+        print("Nombre de mostres:", nMostres)
+
+
+    ```
+
     - Tria un segment de senyal de 25ms i insereix una gráfica amb la seva evolució temporal.
     - Representa la seva transformada en dB en funció de la freqüència, en el marge $0\le f\le f_m/2$.
     - Quines son les freqüències més importants del segment triat?

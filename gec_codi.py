@@ -161,5 +161,7 @@ plt.show()
 #EX4
 
 s, fm = sf.read('Catch & Release (Deepend remix).wav')
-numMostres = len(s)
+nMostres = len(s)
 
+print("Freqüència de mostratge (Hz):", fm)
+print("Nombre de mostres:", nMostres)
